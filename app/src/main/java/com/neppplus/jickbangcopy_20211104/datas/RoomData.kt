@@ -1,13 +1,14 @@
 package com.neppplus.jickbangcopy_20211104.datas
 
 import android.icu.text.NumberFormat
+import java.io.Serializable
 import java.util.*
 
 class RoomData(
     val price: Int,
     val address: String,
     val floor: Int,
-    val description: String) {
+    val description: String) : Serializable  {
 
     //    가격에 따라 다른 형태로 가공해서 가격을 알려주는 함수
 
