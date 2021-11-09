@@ -1,8 +1,6 @@
 package com.neppplus.jickbangcopy_20211104.datas
 
 import android.icu.text.NumberFormat
-import android.os.Build
-import androidx.annotation.RequiresApi
 import java.util.*
 
 class RoomData(
@@ -13,7 +11,6 @@ class RoomData(
 
     //    가격에 따라 다른 형태로 가공해서 가격을 알려주는 함수
 
-    @RequiresApi(Build.VERSION_CODES.N)
     fun getFormattedPrice() : String {
 
         if (this.price < 10000) {
@@ -31,6 +28,22 @@ class RoomData(
             val priceStr = "${uk}억 ${restCommaStr}"
 
             return priceStr
+        }
+
+    }
+
+    //    층수를 상황에 따라 가공해서 보여주는 함수.
+
+    fun getFormattedFloor() : String {
+
+        if (this.floor > 0) {
+            return "${this.floor}층"
+        }
+        else if (this.floor == 0) {
+            return "반지하"
+        }
+        else {
+            return "지하 ${-this.floor}층"
         }
 
     }
