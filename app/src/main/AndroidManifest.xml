@@ -11,6 +11,7 @@
         android:theme="@style/Theme.JickbangCopy_20211104">
         <activity
             android:name=".ViewRoomDetailActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
